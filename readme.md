@@ -21,7 +21,6 @@ npm run server
 goto your browser
 
 and visit localhost:5000 
-
 1- Register 
 2- Login 
 3- After login it will redirect to chat page
