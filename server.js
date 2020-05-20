@@ -5,6 +5,7 @@ const dateTime = require("simple-datetime-formater");
 const bodyParser = require("body-parser");
 const chatRouter = require("./route/chatroute");
 const loginRouter = require("./route/loginRoute");
+const registerRoute = require("./route/registerRoute")
 
 //require the http module
 const http = require("http").Server(app);
@@ -20,6 +21,7 @@ app.use(bodyParser.json());
 //routes
 app.use("/chats", chatRouter);
 app.use("/login", loginRouter);
+app.use("/register", registerRoute);
 
 //set the express.static middleware
 app.use(express.static(__dirname + "/public"));
@@ -61,7 +63,7 @@ socket.on("connection", socket => {
     //save chat to the database
     connect.then(db => {
       console.log("connected correctly to the server");
-      let chatMessage = new Chat({ message: msg, sender: "Anonymous" });
+      let chatMessage = new Chat({ message: msg, sender: "Some User" });
 
       chatMessage.save();
     });

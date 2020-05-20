@@ -1,13 +1,13 @@
 {
-  "name": "chatapp",
+  "name": "node-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Assignmnet",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start": "node server",
+    "server": "nodemon server"
   },
-  "author": "",
+  "author": "Manish Kumar",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -21,5 +21,9 @@
     "passport-local": "^1.0.0",
     "simple-datetime-formater": "^1.0.8",
     "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
   }
 }
